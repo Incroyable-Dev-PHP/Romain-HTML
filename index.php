@@ -1,5 +1,7 @@
 <!DOCTYPE html >
-< html  lang =" en " >
+
+
+<html  lang =" en ">
 
     <?php  include  './includes/head.html' ; ?>
 
@@ -10,7 +12,7 @@
         
         ?>
 
-        < main class=" container" >
+        <main class=" container">
             <?php
                 if (isset( $ _GET [ 'about-me' ])) {
                     include  "./pages/about-me.html" ;
@@ -19,9 +21,12 @@
                     include  "./pages/my-dreams.html" ;
                     return;
                 } elseif (isset( $ _GET [ 'my-passions' ])) {
+
+
                     include  "./pages/my-passions.html" ;
                     return;
-                } else {
+                } else (isset( $ _GET [ 'home' ]))
+                {
                     include  "./pages/accueil.html" ;
                     return;
                 }
@@ -31,4 +36,4 @@
         <?php  include  './includes/footer.html' ; ?>
             </body>
 
-</ html >
+</html>
